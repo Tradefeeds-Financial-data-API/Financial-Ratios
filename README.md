@@ -28,8 +28,113 @@ Our <a href="https://tradefeeds.com/documentation" rel="nofollow">documentation
 
 <h2>Request and response examples</h2>
 
--- problem 
+<strong>Example 1: You search for all financial ratios of Apple Inc.</strong> 
+
+<a href="https://tradefeeds.com/api-documentation/">https://tradefeeds.com/api/v1/financialratios?key=YOUR-KEY&stock_ticker_symbol=aapl</a>
+
+    "status": {
+        "message": "Success"
+    },
+    "results": [
+        {
+        "basics": {
+            "name": "Apple Inc",
+            "stock_ticker_symbol": "AAPL"
+            "isin_identifier": "US0378331005"
+            "exchange": "nasdaq"
+            "industry": "technology"
+            "sector": "consumer electronics"
+        },
+        "output": {
+           "currentRatio": "1.3636044481554577"
+            "quickRatio": "1.2181949294064065"
+            "cashRatio": "0.36071049035979963"
+            "daysOfSalesOutstanding": "49.78753437881355"
+            "daysOfInventoryOutstanding": "8.741883356235881"
+            "operatingCycle": "58.52941773504943"
+            "daysOfPayablesOutstanding": "91.04818971567418"
+            "cashConversionCycle": "-32.518771980624756"
+            "grossProfitMargin": "0.38233247727810865"
+            "operatingProfitMargin": "0.24147314354406862"
+            "pretaxProfitMargin": "0.24439830246070343"
+            "netProfitMargin": "0.20913611278072236"
+            "effectiveTaxRate":" 0.14428164731484103"
+            "returnOnAssets": "0.1772557180259843"
+            "returnOnEquity": "0.8786635853012749"
+            "returnOnCapitalEmployed": "0.3033831282952548"
+            "netIncomePerEBT": "0.855718352685159"
+            "ebtPerEbit": "1.0121138064204682"
+            "ebitPerRevenue": "0.24147314354406862"
+            "debtRatio": "0.7982666847799239"
+            "debtEquityRatio": "3.957039440456695"
+            "longTermDebtToCapitalization": "0.6016060388034584"
+            "totalDebtToCapitalization": "0.6324623822247223"
+            "interestCoverage": "23.07274625826662"
+            "cashFlowToDebtRatio": "0.7175104059198122"
+            "companyEquityMultiplier": "4.957039440456695"
+            "receivablesTurnover": "7.331152356789959"
+            "payablesTurnover": "4.008866086627577"
+            "inventoryTurnover": "41.75301649839941"
+            "fixedAssetTurnover": "7.466545177609748"
+            "assetTurnover": "0.8475615027416885"
+            "operatingCashFlowPerShare": "4.649230448454163"
+            "freeCashFlowPerShare": "4.2280138811865"
+        }
+ 
+        
+<strong>Example 2: You search for data on the current ratios, quick ratios and cash ratios of Apple Inc. Microsoft and Dell Technologies Inc.</strong>
+
+<a href="https://tradefeeds.com/api-documentation/">https://tradefeeds.com/api/v1/financialratios?key=YOUR-KEY&stock_ticker_symbol=aapl,msft,dell&financial-ratio=current_ratio,quick_ratio,cash_ratio</a>
+
+    "status": {
+        "message": "Success"
+    },
+    "results": [
+        {
+        "basics": {
+            "name": "Apple Inc",
+            "stock_ticker_symbol": "AAPL"
+            "isin_identifier": "US0378331005"
+            "exchange": "nasdaq"
+            "industry": "technology"
+            "sector": "consumer electronics"
+        },
+        "output": {
+           "current_ratio": "1.3636044481554577"
+            "quick_ratio": "1.2181949294064065"
+            "cash_ratio": "0.36071049035979963"
+        },
+        "basics": {
+            "name": "Microsoft Corporation",
+            "stock_ticker_symbol": "MSFT"
+            "isin_identifier": "US5949181045"
+            "exchange": "nasdaq"
+            "industry": "technology"
+            "sector": "consumer electronics"
+        },
+        "output": {
+           "current_ratio": "1.8155457736360444"
+            "quick_ratio": "1.2940640652181949"
+            "cash_ratio": "0.49035979963360710"
+        },
+        "basics": {
+            "name": "Dell Technologies Inc",
+            "stock_ticker_symbol": "DELL"
+            "isin_identifier": "US24703L2025"
+            "exchange": "NYSE"
+            "industry": "technology"
+            "sector": "consumer electronics"
+        },
+        "output": {
+           "current_ratio": "1.4815545773636044"
+            "quick_ratio": "1.2940640218194965"
+            "cash_ratio": "0.35979963360710490"
+        },
+
 
 <h2>Customer support</h2>
+In case that you encounter a data issue or you want to have more features added to the API, please contact us at support@tradefeeds.com.
 
 <h2>Legal</h2>
+<p> The use of Tradefeeds proprietary data and API database is subject to the&nbsp;<a href="https://tradefeeds.com/terms-and-conditions-on-data/">Tradefeeds Terms &amp; Conditions.</a></p>
+
